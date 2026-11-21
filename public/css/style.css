@@ -107,3 +107,139 @@ iframe { display: block; width: 100%; height: clamp(20rem, 70vh, 46rem); margin-
   dl { display: block; }
   dd + dt { margin-top: .6rem; }
 }
+
+/* ------------------------------
+   Game Help Chatbot
+------------------------------ */
+
+.chatbot-layout {
+  display: grid;
+  grid-template-columns: minmax(15rem, 20rem) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.chatbot-sidebar {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.chatbot-sidebar label,
+.chat-form label {
+  display: block;
+  margin-bottom: .45rem;
+}
+
+.chatbot-sidebar select,
+.chat-form input {
+  width: 100%;
+  padding: .7rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  background: #121727;
+  color: #f4f4ff;
+  font: inherit;
+}
+
+.suggestion-section h2 {
+  margin-bottom: .65rem;
+}
+
+.suggested-questions {
+  display: grid;
+  gap: .5rem;
+}
+
+.suggestion {
+  width: 100%;
+  padding: .6rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #292f40;
+}
+
+.chatbot-panel {
+  min-height: 31rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-log {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: .8rem;
+
+  max-height: 30rem;
+  overflow-y: auto;
+
+  padding-right: .25rem;
+}
+
+.message {
+  max-width: min(42rem, 92%);
+  padding: .8rem 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+}
+
+.message p {
+  margin: .2rem 0 0;
+}
+
+.assistant-message {
+  align-self: flex-start;
+  background: #121727;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #263044;
+}
+
+.user-message strong {
+  color: var(--accent);
+}
+
+.chat-form {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.chat-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .65rem;
+}
+
+.form-feedback {
+  min-height: 1.5em;
+  margin: .45rem 0 0;
+  color: #ffd18a;
+}
+
+@media (max-width: 42rem) {
+
+  .chatbot-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chatbot-panel {
+    min-height: 26rem;
+  }
+
+  .chat-input-row {
+    grid-template-columns: 1fr;
+  }
+}
