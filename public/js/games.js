@@ -39,5 +39,13 @@ export const games = [
     goal: "[Placeholder]",
     controls: "[Placeholder]",
     rules: "[Placeholder]"
+  },
+  {
+    id: "sudoku",
+    title: "Sudoku",
+    description: "A Sudoku puzzle game with three difficulty levels: Easy, Medium, and Hard. Players can generate new puzzles and check their answers.",
+    goal: "Complete the 9x9 Sudoku grid by filling in the missing numbers correctly.",
+    controls: "Select a difficulty level, click an empty cell, and enter a number from 1 to 9. Use the New Game button to start another puzzle and the Check Answer button to check your solution.",
+    rules: "Fill every row, column, and 3x3 box with the numbers 1 through 9 without repeating any number. The puzzle is complete when all cells are filled correctly."
   }
 ];
