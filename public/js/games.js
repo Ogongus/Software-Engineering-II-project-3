@@ -11,10 +11,10 @@ export const games = [
   {
     id: "snake",
     title: "Snake",
-    description: "[Placeholder]",
-    goal: "[Placeholder]",
-    controls: "[Placeholder]",
-    rules: "[Placeholder]"
+    description: "Guide the snake around the grid, collect food, and grow without crashing.",
+    goal: "Eat as much food as possible and achieve the highest score.",
+    controls: "Use the Arrow Keys or WASD to move. Press P to pause and resume.",
+    rules: "Collect yellow food to grow and increase your score. Avoid hitting the walls or your own body. The game gradually speeds up as your score increases."
   },
   {
     id: "flappybird",

@@ -50,12 +50,12 @@ async function showGame(game) {
   }
   document.querySelector("#instructions").hidden = false;
 
-  const buildUrl = `/builds/${encodeURIComponent(game.id)}/`;
+  const buildUrl = `/builds/${encodeURIComponent(game.id)}/index.html`;
   const status = document.querySelector("#game-status");
   document.querySelector("#play-area").hidden = false;
 
   try {
-    const response = await fetch(`${buildUrl}index.html`, { method: "HEAD" });
+    const response = await fetch(buildUrl, { method: "HEAD" });
     if (response.status === 404) {
       status.textContent = "The browser build for this game has not been added yet.";
       return;
