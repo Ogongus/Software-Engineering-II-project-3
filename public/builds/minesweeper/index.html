@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minesweeper | Group 2</title>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./minesweeper.js"></script>
+</head>
+<body>
+<main>
+<p class="eyebrow">EECS 581 · GROUP 2</p>
+<h1>Minesweeper</h1>
+<p>100 tiles. 10 mines. Find every safe square.</p>
+<div class="toolbar"><button id="restart">New game</button><button id="mode" aria-pressed="false">Flag mode: off</button><span id="counter">Flags: 0 / 10</span></div>
+<p id="status" role="status">Choose a square. Your first reveal is safe.</p>
+<div class="board-wrap"><div id="board" role="group" aria-label="Minesweeper board"></div></div>
+<p class="help">Click to reveal · Right-click or press F to flag<br>On touch screens, turn on Flag mode to place flags.<br>Arrow keys move between tiles · Enter/Space activates · R restarts</p>
+<a href="/catalog.html" target="_top">← Back to game catalog</a>
+<details><summary>Team credits</summary><p>Original Python game: Parker Albright, Aidan Atwood, Joseph Wen H Tan, Ever Armenta, Atique Ahanaf Danial, Viren Chowdary Padarthi. Browser adaptation preserves the original rules and supplied artwork.</p></details>
+<noscript>Enable JavaScript to play Minesweeper.</noscript>
+</main>
+</body>
+</html>
