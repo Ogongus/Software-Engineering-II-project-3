@@ -3,27 +3,193 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Game help | Our Game Arcade</title>
+
   <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Our chatbot logic will live here -->
+  <script type="module" src="/js/chatbot.js"></script>
 </head>
+
 <body>
   <a class="skip" href="#content">Skip to content</a>
+
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="/"><span aria-hidden="true">◆</span> Our Game Arcade</a>
+
+      <a class="brand" href="/">
+        <span aria-hidden="true">◆</span>
+        Our Game Arcade
+      </a>
+
       <nav aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/catalog.html">Games</a>
         <a href="/chatbot.html" aria-current="page">Game help</a>
       </nav>
+
     </div>
   </header>
+
   <main class="shell" id="content">
-<section class="page-heading">
-  <h1>Game help<span>.</span></h1>
-  <p>The chatbot is coming soon. Game pages have instructions for goals, controls, and rules.</p>
-  <a class="button" href="/catalog.html">Browse games <span aria-hidden="true">→</span></a>
-</section>
+
+    <section class="page-heading">
+      <p class="eyebrow">GAME DOCUMENT ASSISTANT</p>
+
+      <h1>
+        Game help<span>.</span>
+      </h1>
+
+      <p>
+        Select a game, then ask about its goal, controls,
+        rules, scoring, or how to play.
+      </p>
+    </section>
+
+
+    <section class="chatbot-layout">
+
+      <!-- LEFT SIDE -->
+      <aside class="panel chatbot-sidebar">
+
+        <div>
+          <label for="game-select">
+            <strong>Choose a game</strong>
+          </label>
+
+          <select id="game-select">
+            <option value="">Select a game...</option>
+          </select>
+        </div>
+
+
+        <div class="suggestion-section">
+
+          <h2>Suggested questions</h2>
+
+          <div
+            class="suggested-questions"
+            id="suggested-questions"
+          >
+
+            <button
+              type="button"
+              class="suggestion"
+              data-question="What is the goal?"
+            >
+              What is the goal?
+            </button>
+
+
+            <button
+              type="button"
+              class="suggestion"
+              data-question="What are the controls?"
+            >
+              What are the controls?
+            </button>
+
+
+            <button
+              type="button"
+              class="suggestion"
+              data-question="What are the rules?"
+            >
+              What are the rules?
+            </button>
+
+
+            <button
+              type="button"
+              class="suggestion"
+              data-question="How does scoring work?"
+            >
+              How does scoring work?
+            </button>
+
+          </div>
+        </div>
+
+
+        <a
+          class="button secondary"
+          href="/catalog.html"
+        >
+          Browse games →
+        </a>
+
+      </aside>
+
+
+      <!-- RIGHT SIDE -->
+      <section class="panel chatbot-panel">
+
+        <div
+          class="chat-log"
+          id="chat-log"
+          aria-live="polite"
+        >
+
+          <div class="message assistant-message">
+
+            <strong>Game Help</strong>
+
+            <p>
+              Choose a game first. I answer using the
+              game's documented goal, controls, and rules.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <form
+          class="chat-form"
+          id="chat-form"
+        >
+
+          <label for="question">
+            <strong>Ask a question</strong>
+          </label>
+
+
+          <div class="chat-input-row">
+
+            <input
+              id="question"
+              name="question"
+              type="text"
+              autocomplete="off"
+              maxlength="220"
+              placeholder="Example: How do I move?"
+            >
+
+
+            <button
+              class="button"
+              type="submit"
+            >
+              Send
+            </button>
+
+          </div>
+
+
+          <p
+            class="form-feedback"
+            id="form-feedback"
+            role="status"
+          ></p>
+
+        </form>
+
+      </section>
+
+    </section>
+
   </main>
+
 </body>
 </html>
