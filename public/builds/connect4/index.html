@@ -194,11 +194,60 @@ asyncio.run( custom_site() )
 
 
 
+# =============================================================================
+# --></script><head><!--
+//=============================================================================
+//
+//
+//
+//
+//
+//
+//
+
+    {%- if cookiecutter.comment != "" -%}
+{{cookiecutter.comment}}
+    {% endif %}
+
+--><script type="application/javascript">
+// END BLOCK
 
 
 
+// this dict is available under PyConfig.config from __main__
+
+config = {
+    xtermjs : "1" ,
+    _sdl2 : "canvas",
+    user_canvas : 0,
+    user_canvas_managed : 0,
+    ume_block : 1,
+    can_close : 0,
+    archive : "connect4",
+    gui_debug : 3,
+    cdn : "https://pygame-web.github.io/archives/0.9/",
+    autorun : 0,
+    PYBUILD : "3.12"
+}
+
+</script>
+
+    <title>Connect 4</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.9/pythonrc.py">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.9/vt/xterm.js">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.9/vt/xterm-addon-image.js">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.9/vt/xterm-addon-image.js">
 
 
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
 
 
-
+</body>
+</html>
